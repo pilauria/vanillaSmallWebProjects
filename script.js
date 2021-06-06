@@ -7,10 +7,10 @@ const calculateWealthBtn = document.getElementById('calculate-wealth');
 
 let data = [];
 
-// FETCH RANDOM USER AND MONEY
-// function getRandomUser() {
-//   fetch('https://randomuser.me/api').then(res => res.json()).then(data =>   );
-// }
+FETCH RANDOM USER AND MONEY
+function getRandomUser() {
+  fetch('https://randomuser.me/api').then(res => res.json()).then(data =>   );
+}
 
 getRandomUser();
 getRandomUser();
@@ -22,3 +22,4 @@ async function getRandomUser() {
 
   console.log(data);
 }
+console.log('io');

@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e9f5db;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0ch;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+  font-size: 1.3rem;
+}
+
+aside {
+  padding: 10px 20px;
+  width: 250px;
+  border-right: 1px solid #718355;
+}
+
+button {
+  background-color: aliceblue;
+  border: solid 1px #718355;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block; /* so it's button is on its own line(originarly they are inline)*/
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+button:hover {
+  background-color: #c1cfaa;
+}
+
+main {
+  flex: 1;
+  padding: 10px 30px;
+}
+
+h2 {
+  border-bottom: solid 1px #718355;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+
+h3 {
+  background-color: #fff;
+  border-bottom: solid 1px #718355;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  margin: 20px 0 0;
+}
+
+.person {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}

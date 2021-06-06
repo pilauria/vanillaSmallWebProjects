@@ -45,6 +45,8 @@ h1 {
 
 p {
   text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .btn {
@@ -52,15 +54,20 @@ p {
   background-color: var(--primary-color);
   cursor: pointer;
   border-radius: 8px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   padding: 5px 5px;
+}
+
+.btn:hover {
+  transform: scale(0.97);
+  background-color: rgb(39, 182, 168);
 }
 
 .money-img {
   height: 450px;
   width: 450px;
   margin: -100px;
-  border: 1px solid turquoise;
+  border: 1px solid rgb(32, 219, 201);
   border-radius: 10px;
 }
 
