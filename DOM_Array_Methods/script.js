@@ -1,9 +1,10 @@
 const main = document.getElementById('main');
 const addUserBtn = document.getElementById('add-user');
 const doubleBtn = document.getElementById('double');
-const showMillionairesBtn = document.getElementById('show-millionaires');
+const showMillionairesBtn = document.getElementById('show-millionaries');
 const sortBtn = document.getElementById('sort');
 const calculateWealthBtn = document.getElementById('calculate-wealth');
+const reset = document.getElementById('reset');
 
 let data = [];
 
@@ -25,6 +26,52 @@ async function getRandomUser() {
   };
   addData(newUser);
 }
+
+// Double everyones Money: array.map()   ****
+function doubleMoney() {
+  data = data.map(user => {
+    user.money = user.money * 2;
+    return user;
+  });
+  updateDOM();
+}
+
+// Sort by richest: array.sort()
+function sortByRichest() {
+  data.sort((a, b) => {
+    return b.money - a.money;
+  });
+  updateDOM();
+}
+
+// Show only Millionaries: array.filter()
+function displayMillionaries() {
+  data = data.filter(user => {
+    return user.money > 1000000;
+  });
+  updateDOM();
+}
+
+// Calculate entire wealth
+function displayWealth() {
+  const wealth = data.reduce((acc, user) => {
+    return acc + user.money;
+  }, 0);
+  // Create a new div elem that contains the wealth value.
+  const wealthEl = document.createElement('div'); // create a new div
+  wealthEl.innerHTML = `<h3>Total Wealth: <strong>${formatMoney(
+    wealth
+  )}</strong></h3>`;
+
+  updateDOM(); // to not display multiple times the total wealth if we press the whealth button several times
+  // Put wealth into the DOM
+  main.appendChild(wealthEl);
+}
+
+// Reset
+// function resetUI() {
+//   main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
+// }
 
 // Add new obj to data arr
 function addData(obj) {
@@ -55,3 +102,25 @@ function formatMoney(number) {
 }
 
 // Event listener
+addUserBtn.addEventListener('click', getRandomUser);
+doubleBtn.addEventListener('click', doubleMoney);
+sortBtn.addEventListener('click', sortByRichest);
+showMillionairesBtn.addEventListener('click', displayMillionaries);
+calculateWealthBtn.addEventListener('click', displayWealth);
+// reset.addEventListener('click', resetUI);
+
+// Reduce with array of object example
+// let data3 = [
+//   { name: 1, money: 123 },
+//   { name: 2, money: 456 },
+//   { name: 3, money: 789 },
+// ];
+
+// function mamma() {
+//   const wealth = data3.reduce((acc, user) => {
+//     return acc + user.money;
+//   }, 0);
+//   console.log(wealth);
+// }
+
+// mamma();
