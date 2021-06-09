@@ -120,12 +120,13 @@ h1 {
 }
 
 .notification-container {
+  /* it's off of the screen at the beginning on the bottom(because of: position:absolute and margin bottom -60px. It will shows up with JS*/
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px 10px 0 0;
   padding: 20px 25px;
   position: absolute; /* inside the browser body*/
   bottom: -60px;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.9s ease-in-out;
 }
 
 .notification-container p {
@@ -133,5 +134,5 @@ h1 {
 }
 
 .notification-container.show {
-  transform: translateY(-50px);
+  transform: translateY(-80px);
 }
