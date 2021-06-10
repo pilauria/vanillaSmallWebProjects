@@ -18,6 +18,11 @@ body {
   margin: 0;
 }
 
+h1 {
+  font-size: 3.4rem;
+  margin-top: 80px;
+}
+
 .container {
   display: flex;
   align-items: center;
@@ -42,12 +47,16 @@ body {
 
 .gradient-circle {
   background: conic-gradient(
-    #55b7a4 0%,
+    #fff 0%,
+    #fff 3%,
+    #55b7a4 5%,
     #4ca493 40%,
-    #fff 40%,
-    #fff 60%,
+    #fff 42%,
+    #fff 58%,
     #336d62 60%,
-    #2a5b52 100%
+    #2a5b52 95%,
+    #fff 98%,
+    #fff 98%
   );
   height: 320px;
   width: 320px;
@@ -61,8 +70,8 @@ body {
 .pointer {
   background-color: #fff;
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   display: block; /* because it's a span(span are in-line by default)*/
 }
 
@@ -74,6 +83,27 @@ body {
   height: 190px;
   animation: rotate 7.5s linear forwards infinite;
   transform-origin: bottom center;
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 250px;
+}
+
+.start-btn {
+  padding: 20px 30px;
+  margin: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.43);
+}
+
+.start-btn:hover {
+  background-color: rgb(164, 252, 255);
+  transform: scale(0.99);
 }
 
 @keyframes rotate {
@@ -95,7 +125,7 @@ body {
     transform: scale(1);
   }
   to {
-    transform: scale(1.2);
+    transform: scale(1.25);
   }
 }
 
@@ -105,7 +135,7 @@ body {
 
 @keyframes shrink {
   from {
-    transform: scale(1.2);
+    transform: scale(1.25);
   }
   to {
     transform: scale(1);

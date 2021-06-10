@@ -1,5 +1,6 @@
 const container = document.getElementById('container');
 const text = document.getElementById('text');
+const start = document.querySelector('.start-btn');
 
 const totalTime = 7500;
 const breatheTime = (totalTime / 5) * 2;
@@ -25,3 +26,5 @@ function breathAnimation() {
 }
 
 setInterval(breathAnimation, totalTime);
+
+// start.addEventListener('click', breathAnimation);
