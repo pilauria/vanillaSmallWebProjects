@@ -1,6 +1,7 @@
 const container = document.getElementById('container');
 const text = document.getElementById('text');
-const start = document.querySelector('.start-btn');
+const start = document.querySelector('#start');
+const stop = document.querySelector('#stop');
 
 const totalTime = 7500;
 const breatheTime = (totalTime / 5) * 2;
@@ -25,6 +26,19 @@ function breathAnimation() {
   }, breatheTime);
 }
 
+// function stopBreathe() {
+//   text.innerText = 'Breathe In!';
+//   container.className = 'container';
+// }
+
 setInterval(breathAnimation, totalTime);
 
-// start.addEventListener('click', breathAnimation);
+// start.addEventListener('click', () => {
+//   pointerContainer.className = 'pointer container animation';
+//   breathAnimation();
+//   setInterval(breathAnimation, totalTime);
+// });
+
+// stop.addEventListener('click', () => {
+//   setInterval(breathAnimation, 0);
+// });
