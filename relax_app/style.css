@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #023e8a url('./img/jeremy-bishop-G9i_plbfDgk-unsplash.jpg')
+  background: #023e8a url('./img/jonas-allert-ICp-goo2VMI-unsplash.jpg')
     no-repeat center center/ cover;
 
   color: #fff;
@@ -19,8 +19,12 @@ body {
 }
 
 h1 {
-  font-size: 3.4rem;
-  margin-top: 80px;
+  font-size: 3.7rem;
+  margin-top: 100px;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid black;
+  background: rgba(22, 22, 22, 0.63);
 }
 
 .container {
@@ -62,6 +66,7 @@ h1 {
   width: 320px;
   z-index: -2;
   border-radius: 50%;
+  border: 1px solid #333;
   position: absolute;
   top: -10px;
   left: -10px;
@@ -81,17 +86,20 @@ h1 {
   left: 140px;
   width: 20px;
   height: 190px;
-}
-.pointer-container-animation {
   animation: rotate 7.5s linear forwards infinite;
   transform-origin: bottom center;
 }
+
+/* .pointer-container.animation {
+  animation: rotate 7.5s linear forwards infinite;
+  transform-origin: bottom center;
+} */
 
 .start {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 250px;
+  top: 290px;
 }
 
 .start-btn {

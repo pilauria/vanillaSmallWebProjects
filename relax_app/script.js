@@ -26,15 +26,18 @@ function breathAnimation() {
   }, breatheTime);
 }
 
+setInterval(breathAnimation, totalTime);
+
+////////////////////////////////////
+// Implementing 'start/stop' buttons
+
 // function stopBreathe() {
 //   text.innerText = 'Breathe In!';
 //   container.className = 'container';
 // }
 
-setInterval(breathAnimation, totalTime);
-
 // start.addEventListener('click', () => {
-//   pointerContainer.className = 'pointer container animation';
+//   pointerContainer.className = 'pointerContainer animation';   <===
 //   breathAnimation();
 //   setInterval(breathAnimation, totalTime);
 // });
