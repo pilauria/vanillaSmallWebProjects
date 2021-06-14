@@ -68,10 +68,11 @@ function displayWealth() {
   main.appendChild(wealthEl);
 }
 
-// Reset
-// function resetUI() {
-//   main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
-// }
+// Reset/ Clear              <=============
+function resetUI() {
+  updateDOM();
+  main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
+}
 
 // Add new obj to data arr
 function addData(obj) {
@@ -107,7 +108,7 @@ doubleBtn.addEventListener('click', doubleMoney);
 sortBtn.addEventListener('click', sortByRichest);
 showMillionairesBtn.addEventListener('click', displayMillionaries);
 calculateWealthBtn.addEventListener('click', displayWealth);
-// reset.addEventListener('click', resetUI);
+reset.addEventListener('click', resetUI);
 
 // Reduce with array of object example
 // let data3 = [
