@@ -29,7 +29,8 @@ function breathAnimation() {
 setInterval(breathAnimation, totalTime);
 
 ////////////////////////////////////
-// Implementing 'start/stop' buttons
+// Right now the app start as the page is loaded. I want to add 'start/stop' buttons.
+// I need to add 2 event listeren (1 for the 'start' button', 1 for the 'stop' button).
 
 // function stopBreathe() {
 //   text.innerText = 'Breathe In!';
@@ -37,7 +38,7 @@ setInterval(breathAnimation, totalTime);
 // }
 
 // start.addEventListener('click', () => {
-//   pointerContainer.className = 'pointerContainer animation';   <===
+//   pointerContainer.className = 'pointerContainer animation';   <=== I don't know how to change this class
 //   breathAnimation();
 //   setInterval(breathAnimation, totalTime);
 // });

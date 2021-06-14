@@ -90,7 +90,7 @@ h1 {
   transform-origin: bottom center;
 }
 
-/* .pointer-container.animation {
+/* .pointer-container.animation {      // I don't know how to change this class in JS
   animation: rotate 7.5s linear forwards infinite;
   transform-origin: bottom center;
 } */
