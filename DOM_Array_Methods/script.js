@@ -63,15 +63,16 @@ function displayWealth() {
     wealth
   )}</strong></h3>`;
 
-  updateDOM(); // to not display multiple times the total wealth if we press the whealth button several times
-  // Put wealth into the DOM
+  updateDOM(); // to not display multiple times the total wealth, if we press the whealth button several times
+  // Insert wealth into the DOM
   main.appendChild(wealthEl);
 }
 
-// Reset/ Clear              <=============
+// Reset / Clear UI
 function resetUI() {
   updateDOM();
   main.innerHTML = '<h2><strong>Person</strong> Wealth</h2>';
+  data = [];
 }
 
 // Add new obj to data arr
@@ -110,6 +111,7 @@ showMillionairesBtn.addEventListener('click', displayMillionaries);
 calculateWealthBtn.addEventListener('click', displayWealth);
 reset.addEventListener('click', resetUI);
 
+////////////////////////////////////////////
 // Reduce with array of object example
 // let data3 = [
 //   { name: 1, money: 123 },
