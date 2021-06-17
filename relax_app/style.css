@@ -110,10 +110,11 @@ h1 {
 .start-btn {
   padding: 20px 30px;
   margin: 10px;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 600;
   border-radius: 10px;
   box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.43);
+  letter-spacing: 1px;
 }
 
 .start-btn:hover {
